@@ -9,9 +9,15 @@ int main()
 	int answer1;
 	int answer2;
 
-	answer0 = rand() % 10;
-	answer1 = rand() % 10;
-	answer2 = rand() % 10;
+	while (1)
+	{
+		answer0 = rand() % 10;
+		answer1 = rand() % 10;
+		answer2 = rand() % 10;
+
+		if (answer0 != answer1 && answer1 != answer2 && answer2 != answer0)
+			break;
+	}
 
 	cout << "[정답] ";
 	cout << answer0 << ' ';
@@ -43,9 +49,9 @@ int main()
 
 
 		// 3. 결과를 계산한다.
-		int strike;
-		int ball;
-		int out;
+		int strike = 0;
+		int ball = 0;
+		int out = 0;
 
 		if (answer0 == guess0)
 			strike++;
