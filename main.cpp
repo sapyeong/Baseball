@@ -2,6 +2,19 @@
 #include <stdlib.h>
 using namespace std;
 
+//const int TRUE = 1;
+#define TRUE 1 // 전처리기 지시어
+#define MAX_VALUE 10
+#define STRIKE_TO_FINISH 3
+
+/*
+casing
+
+Pascal :ThisIsName
+Camel :	thisIsName
+Upper : THIS_IS_NAME
+*/
+
 int main()
 {
 	// 1. 0~9 사이의 중복되지 않는 세 개의 난수를 생성한다. (정답)
@@ -9,11 +22,11 @@ int main()
 	int answer1;
 	int answer2;
 
-	while (1)
+	while (TRUE)
 	{
-		answer0 = rand() % 10;
-		answer1 = rand() % 10;
-		answer2 = rand() % 10;
+		answer0 = rand() % MAX_VALUE;
+		answer1 = rand() % MAX_VALUE;
+		answer2 = rand() % MAX_VALUE;
 
 		if (answer0 != answer1 && answer1 != answer2 && answer2 != answer0)
 			break;
@@ -26,7 +39,7 @@ int main()
 	cout << endl;
 
 
-	while (1)
+	while (TRUE)
 	{
 		// 2. 사용자가 세 개의 숫자를 입력한다. (추측)
 		int guess0;
@@ -80,7 +93,7 @@ int main()
 
 
 		// 5. 3스트라이커가 아니면 2번으로 돌아간다.
-		if (strike == 3)
+		if (strike == STRIKE_TO_FINISH)
 			break;
 	}
 	
