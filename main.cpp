@@ -1,13 +1,22 @@
 #include <iostream>
 #include <stdlib.h>
+#include "Result.h"
+
 using namespace std;
 
-//const int TRUE = 1;
 #define TRUE 1 // 전처리기 지시어
 #define MAX_VALUE 10
 #define STRIKE_TO_FINISH 3
 #define DIGIT 3
-// debug
+
+//typedef struct 
+//{
+//	int Strike;
+//	int Ball;
+//	int Out;
+//}Result;
+
+
 int main()
 {
 	// 1. 0~9 사이의 중복되지 않는 세 개의 난수를 생성한다. (정답)
