@@ -21,7 +21,7 @@ int main()
 {
 	// 1. 0~9 사이의 중복되지 않는 세 개의 난수를 생성한다. (정답)
 	int answers[DIGIT];
-	
+
 	while (TRUE)
 	{
 		for (int i = 0; i < DIGIT; i++)
@@ -41,7 +41,7 @@ int main()
 	{
 		// 2. 사용자가 세 개의 숫자를 입력한다. (추측)
 		int guesses[DIGIT];
-		
+
 		for (int i = 0; i < DIGIT; i++)
 		{
 			cin >> guesses[i];
@@ -55,9 +55,11 @@ int main()
 
 
 		// 3. 결과를 계산한다.
-		int strike = 0;
-		int ball = 0;
-		int out = 0;
+		Result result;
+		result.strike = 0;
+		result.ball = 0;
+		result.out = 0;
+
 
 		for (int i = 0; i < DIGIT; i++)
 		{
@@ -65,22 +67,22 @@ int main()
 			int k = (i + 2) % 3;
 
 			if (answers[i] == guesses[i])
-				strike++;
+				result.strike++;
 			else if (answers[i] == guesses[j] || answers[i] == guesses[k])
-				ball++;
+				result.ball++;
 			else
-				out++;
+				result.out++;
 		}
-		
+
 
 		// 4. 결과를 출력한다.
-		cout << "[S]" << strike << " [B]" << ball << " [O]" << out << endl;
+		cout << "[S]" << result.strike << " [B]" << result.ball << " [O]" << result.out << endl;
 
 
 		// 5. 3스트라이커가 아니면 2번으로 돌아간다.
-		if (strike == STRIKE_TO_FINISH)
+		if (result.strike == STRIKE_TO_FINISH)
 			break;
 	}
-	
+
 	return 0;
 }
