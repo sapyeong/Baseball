@@ -16,6 +16,13 @@ using namespace std;
 //	int Out;
 //}Result;
 
+void PrintNumbers(const char* prefix, int* numbers)
+{
+	cout << prefix;
+	for (int i = 0; i < DIGIT; i++)
+		cout << numbers[i] << ' ';
+	cout << endl;
+}
 
 int main()
 {
@@ -31,10 +38,7 @@ int main()
 			break;
 	}
 
-	cout << "[정답] ";
-	for (int i = 0; i < DIGIT; i++)
-		cout << answers[i] << ' ';
-	cout << endl;
+	PrintNumbers("[정답] ", answers);
 
 
 	while (TRUE)
@@ -48,10 +52,7 @@ int main()
 			getwchar(); // 엔터를 지움
 		}
 
-		cout << "[추측] ";
-		for (int i = 0; i < DIGIT; i++)
-			cout << guesses[i] << ' ';
-		cout << endl;
+		PrintNumbers("[추측] ", guesses);
 
 
 		// 3. 결과를 계산한다.
