@@ -12,6 +12,8 @@ using namespace std;
 #define DIGIT 3  
 #pragma endregion
 
+// CTRL+- : 이전 위치로 이동
+
 void PrintNumbers(const char* prefix, int* numbers)
 {
 	cout << prefix;
