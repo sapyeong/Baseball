@@ -45,12 +45,11 @@ void InputGuesses(int* guesses)
 	PrintNumbers("[추측] ", guesses);
 }
 
-Result CalculateResult(int* answers, int* guesses)
+void CalculateResult(Result* result, int* answers, int* guesses)
 {
-	Result result;
-	result.strike = 0;
-	result.ball = 0;
-	result.out = 0;
+	result->strike = 0;
+	result->ball = 0;
+	result->out = 0;
 
 	for (int i = 0; i < DIGIT; i++)
 	{
@@ -58,32 +57,32 @@ Result CalculateResult(int* answers, int* guesses)
 		int k = (i + 2) % 3;
 
 		if (answers[i] == guesses[i])
-			result.strike++;
+			result->strike++;
 		else if (answers[i] == guesses[j] || answers[i] == guesses[k])
-			result.ball++;
+			result->ball++;
 		else
-			result.out++;
+			result->out++;
 	}
-
-	result;
 }
 
-void PrintResult(Result result)
+void PrintResult(Result* result)
 {
-	cout << "[S]" << result.strike << " [B]" << result.ball << " [O]" << result.out << endl;
+	// (*result).strike <-> result->strike
+
+	cout << "[S]" << result->strike << " [B]" << result->ball << " [O]" << result->out << endl;
 }
 
-int IsThreeStrike(Result result)
+int IsThreeStrike(Result* result)
 {
-	if (result.strike == STRIKE_TO_FINISH)
+	if (result->strike == STRIKE_TO_FINISH)
 		return TRUE;
 	else
 		return FALSE;
 }
 
-int MoreThan4Points(Result result)
+int MoreThan4Points(Result* result)
 {
-	int point = result.strike * 2 + result.ball;
+	int point = result->strike * 2 + result->ball;
 
 	return point >= 4 ? TRUE : FALSE;
 }
@@ -103,17 +102,18 @@ int main()
 
 
 		// 3. 결과를 계산한다.
-		Result result = CalculateResult(answers, guesses);
+		Result result;
+		CalculateResult(&result, answers, guesses);
 
 
 		// 4. 결과를 출력한다.
-		PrintResult(result);
+		PrintResult(&result);
 
 
 		// 5. 3스트라이커가 아니면 2번으로 돌아간다.
 		int isValidReult;
-		isValidReult = IsThreeStrike(result);
-		//isValidReult = MoreThan4Points(result);
+		isValidReult = IsThreeStrike(&result);
+		//isValidReult = MoreThan4Points(&result);
 
 		if (isValidReult)
 			break;
