@@ -14,7 +14,4 @@
 void PrintNumbers(const char*, int*);
 void GenerateAnswers(int* answers);
 void InputGuesses(int* guesses);
-void CalculateResult(Result* result, int* answers, int* guesses);
-void PrintResult(Result* result);
-int IsThreeStrike(Result* result);
-int MoreThan4Points(Result* result);
+

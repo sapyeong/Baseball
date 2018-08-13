@@ -20,17 +20,18 @@ int main()
 
 		// 3. 결과를 계산한다.
 		Result result;
-		CalculateResult(&result, answers, guesses);
+		result.Calculate(answers, guesses);
+		//result.Calculate(answers, guesses);
 
-
+		
 		// 4. 결과를 출력한다.
-		PrintResult(&result);
+		result.Print();
 
 
 		// 5. 3스트라이커가 아니면 2번으로 돌아간다.
 		int isValidReult;
-		isValidReult = IsThreeStrike(&result);
-		//isValidReult = MoreThan4Points(&result);
+		isValidReult = result.IsThreeStrike();
+		//isValidReult = result.MoreThan4Points();
 
 		if (isValidReult)
 			break;
