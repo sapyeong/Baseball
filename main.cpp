@@ -16,8 +16,6 @@ int main()
 		Guess guess;
 		guess.Input();
 
-		// answer.numbers[0] = 5; <- 막을 수 있는 방법이 없음.
-
 
 		// 3. 결과를 계산한다.
 		Result result;

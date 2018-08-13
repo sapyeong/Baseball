@@ -13,14 +13,11 @@ void Result::Calculate(Answer* answer, Guess* guess)
 		int j = (i + 1) % 3;
 		int k = (i + 2) % 3;
 
-		if (answer->numbers[i] == guess->numbers[i])
+		if (answer->At(i) == guess->At(i))
 			strike++;
 		else if 
-			(
-			answer->numbers[i] == guess->numbers[j] 
-				|| 
-			answer->numbers[i] == guess->numbers[k]
-				)
+			(answer->At(i) == guess->At(j) || 
+			answer->At(i) == guess->At(k))
 			ball++;
 		else
 			out++;

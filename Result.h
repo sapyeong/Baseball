@@ -2,12 +2,14 @@
 #include "Answer.h"
 #include "Guess.h"
 
-struct Result
+class Result
 {
+private:
 	int strike;
 	int ball;
 	int out;
 
+public:
 	void Calculate(Answer* answer, Guess* guess);
 	void Print();
 	int IsThreeStrike();

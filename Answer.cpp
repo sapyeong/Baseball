@@ -21,3 +21,11 @@ void Answer::Print()
 		std::cout << numbers[i] << ' ';
 	std::cout << std::endl;
 }
+
+int Answer::At(int index)
+{
+	if (index < 0 || index >= DIGIT)
+		return -1;
+
+	return numbers[index];
+}

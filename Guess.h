@@ -1,10 +1,14 @@
 #pragma once
 
-struct Guess
+class Guess
 {
+private:
 	int numbers[DIGIT];
 
+	void Print();
+
+public:
 	void Input();
 
-	void Print();
+	int At(int index);
 };
