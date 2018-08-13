@@ -1,4 +1,6 @@
 #pragma once
+#include "Answer.h"
+#include "Guess.h"
 
 struct Result
 {
@@ -6,10 +8,8 @@ struct Result
 	int ball;
 	int out;
 
-	void Calculate(int* answers, int* guesses);
-		void Result::Print();
+	void Calculate(Answer* answer, Guess* guess);
+	void Print();
 	int IsThreeStrike();
 	int MoreThan4Points();
-
-	void Print();
 };

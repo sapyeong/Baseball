@@ -10,8 +10,7 @@
 
 #include <iostream>
 #include "Result.h"
+#include "Answer.h"
+#include "Guess.h"
 
-void PrintNumbers(const char*, int*);
-void GenerateAnswers(int* answers);
-void InputGuesses(int* guesses);
 

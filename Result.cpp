@@ -2,7 +2,7 @@
 
 using namespace std;
 
-void Result::Calculate(int* answers, int* guesses)
+void Result::Calculate(Answer* answer, Guess* guess)
 {
 	strike = 0;
 	ball = 0;
@@ -13,9 +13,14 @@ void Result::Calculate(int* answers, int* guesses)
 		int j = (i + 1) % 3;
 		int k = (i + 2) % 3;
 
-		if (answers[i] == guesses[i])
+		if (answer->numbers[i] == guess->numbers[i])
 			strike++;
-		else if (answers[i] == guesses[j] || answers[i] == guesses[k])
+		else if 
+			(
+			answer->numbers[i] == guess->numbers[j] 
+				|| 
+			answer->numbers[i] == guess->numbers[k]
+				)
 			ball++;
 		else
 			out++;

@@ -1,15 +1,23 @@
 #include "main.h"
 
-void GenerateAnswers(int* answers)
+void Answer::Generate()
 {
 	while (TRUE)
 	{
 		for (int i = 0; i < DIGIT; i++)
-			answers[i] = rand() % MAX_VALUE;
+			numbers[i] = rand() % MAX_VALUE;
 
-		if (answers[0] != answers[1] && answers[1] != answers[2] && answers[2] != answers[0])
+		if (numbers[0] != numbers[1] && numbers[1] != numbers[2] && numbers[2] != numbers[0])
 			break;
 	}
 
-	PrintNumbers("[정답] ", answers);
+	Print();
+}
+
+void Answer::Print()
+{
+	std::cout << "[정답] ";
+	for (int i = 0; i < DIGIT; i++)
+		std::cout << numbers[i] << ' ';
+	std::cout << std::endl;
 }
