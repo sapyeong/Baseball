@@ -140,12 +140,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Answer.cpp" />
+    <ClCompile Include="NumberContainer.cpp" />
     <ClCompile Include="Guess.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Result.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Answer.h" />
+    <ClInclude Include="NumberContainer.h" />
     <ClInclude Include="Guess.h" />
     <ClInclude Include="main.h" />
     <ClInclude Include="Result.h" />

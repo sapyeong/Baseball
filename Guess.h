@@ -1,14 +1,9 @@
+#include "NumberContainer.h"
+
 #pragma once
 
-class Guess
+class Guess : public NumberContainer
 {
-private:
-	int numbers[DIGIT];
-
-	void Print();
-
 public:
 	void Input();
-
-	int At(int index);
 };
