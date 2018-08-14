@@ -4,7 +4,7 @@
 
 class Result
 {
-private:
+protected:
 	int strike;
 	int ball;
 	int out;
@@ -12,6 +12,5 @@ private:
 public:
 	void Calculate(Answer* answer, Guess* guess);
 	void Print();
-	int IsThreeStrike();
-	int MoreThan4Points();
+	virtual int IsCorrect();
 };

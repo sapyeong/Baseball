@@ -12,5 +12,5 @@
 #include "Result.h"
 #include "Answer.h"
 #include "Guess.h"
-
+#include "PointResult.h"
 

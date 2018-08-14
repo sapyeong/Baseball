@@ -143,6 +143,7 @@
     <ClCompile Include="NumberContainer.cpp" />
     <ClCompile Include="Guess.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="PointResult.cpp" />
     <ClCompile Include="Result.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -150,6 +151,7 @@
     <ClInclude Include="NumberContainer.h" />
     <ClInclude Include="Guess.h" />
     <ClInclude Include="main.h" />
+    <ClInclude Include="PointResult.h" />
     <ClInclude Include="Result.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

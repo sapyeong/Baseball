@@ -29,17 +29,10 @@ void Result::Print()
 	cout << "[S]" << strike << " [B]" << ball << " [O]" << out << endl;
 }
 
-int Result::IsThreeStrike()
+int Result::IsCorrect()
 {
 	if (strike == STRIKE_TO_FINISH)
 		return TRUE;
 	else
 		return FALSE;
-}
-
-int Result::MoreThan4Points()
-{
-	int point = strike * 2 + ball;
-
-	return point >= 4 ? TRUE : FALSE;
 }

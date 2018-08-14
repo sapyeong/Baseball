@@ -18,18 +18,22 @@ int main()
 
 
 		// 3. 결과를 계산한다.
-		Result result;
-		result.Calculate(&answer, &guess);
+		Result* result;
+
+		result = new Result;
+		//result = (Result*)malloc(sizeof(PointResult));
+
+		result->Calculate(&answer, &guess);
 		//result.Calculate(answers, guesses);
 
 		
 		// 4. 결과를 출력한다.
-		result.Print();
+		result->Print();
 
 
 		// 5. 3스트라이커가 아니면 2번으로 돌아간다.
 		int isValidReult;
-		isValidReult = result.IsThreeStrike();
+		isValidReult = result->IsCorrect();
 		//isValidReult = result.MoreThan4Points();
 
 		if (isValidReult)
