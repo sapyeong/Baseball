@@ -1,11 +1,6 @@
 #include "NumberContainer.h"
 #include "main.h"
 
-const char* NumberContainer::GetPrefix()
-{
-	return NULL;
-}
-
 // template method
 void NumberContainer::Print()
 {
