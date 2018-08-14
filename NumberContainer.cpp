@@ -1,20 +1,22 @@
 #include "NumberContainer.h"
 #include "main.h"
 
-char* NumberContainer::GetPrefix()
+const char* NumberContainer::GetPrefix()
 {
 	return NULL;
 }
 
+// template method
 void NumberContainer::Print()
 {
-	char* prefix = GetPrefix();
+	const char* prefix = GetPrefix();
 
 	std::cout << prefix;
 	for (int i = 0; i < DIGIT; i++)
 		std::cout << numbers[i] << ' ';
 	std::cout << std::endl;
 }
+
 
 int NumberContainer::At(int index)
 {

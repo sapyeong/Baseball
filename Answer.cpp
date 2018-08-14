@@ -1,4 +1,5 @@
 #include "main.h"
+#include "NumberContainer.h"
 
 void Answer::Generate()
 {
@@ -13,4 +14,10 @@ void Answer::Generate()
 
 	Print();
 }
+
+const char* Answer::GetPrefix()
+{
+	return "[Á¤´ä] ";
+}
+
 

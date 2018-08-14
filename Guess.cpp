@@ -1,4 +1,5 @@
 #include "main.h"
+#include "NumberContainer.h"
 
 void Guess::Input()
 {
@@ -10,3 +11,9 @@ void Guess::Input()
 
 	Print();
 }
+
+const char* Guess::GetPrefix()
+{
+	return "[ÃßÃø] ";
+}
+

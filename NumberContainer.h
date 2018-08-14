@@ -6,7 +6,7 @@ protected:
 
 	void Print();
 
-	char* GetPrefix()
+	virtual const char* GetPrefix();
 
 public:
 	int At(int index);
